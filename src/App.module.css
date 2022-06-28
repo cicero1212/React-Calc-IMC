@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    padding-bottom: 50px;
+}
+
+.headerContainer{
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+.container{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+}
+
+.container .leftSide{
+    flex: 1;
+    margin-right: 40px;
+}
+.container .leftSide h1{
+    font-size: 40px;
+    color: #3a4b5c;
+}
+.container .leftSide p{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #6a7d8b;
+}
+.container .leftSide input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 171, 0.5);
+    padding: 10px 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.container .leftSide input:disabled{
+    opacity: 0.6;
+}
+.container .leftSide button{
+    background-color: #227c9d;
+    color: white;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: all ease 0.3s;
+}
+.container .leftSide button:hover{
+    opacity: 0.8;
+}
+.container .leftSide button:disabled{
+    opacity: 0.6;
+}
+
+
+.container .rightSide{
+    display: flex;
+    flex: 1;
+    margin-left: 40px;
+}
+.container .rightSide .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    flex: 1;
+}
+.container .rightSide .rightBig{
+    display: flex;
+    flex: 1;
+}
+.container .rightSide .rightArrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -35px;
+    margin-top: 145px;
+    position: absolute;
+    background-color: #227c9d;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.container .rightSide .rightArrow:hover{
+    opacity: 0.9;
+}
+
+
+@media (max-width: 925px){
+    header{
+        padding: 0 20px;
+    }
+    .container{
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    .container .leftSide{
+        margin-right: 0;
+    }
+    .container .rightSide{
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .container .rightSide .rightArrow{
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 430px){
+    .container .rightSide .grid{
+        grid-template-columns: 1fr;
+    }
+}
